@@ -44,25 +44,25 @@ public class UserController {
 		return this.userService.findByUsername(username);
 	}
 	
-	@GetMapping("/{first}/{last}/{username}/{password}/{phone}/{emailId}")
-	public String createUser(@PathVariable String first, @PathVariable String last, @PathVariable String username, @PathVariable String password, @PathVariable String phone, @PathVariable String emailId) {	
-		User user = new User();
-        
-		user.setFirstName(first);
-		user.setLastName(last);
-		user.setUsername(username);
-		user.setPassword(password);
-		user.setPhone(phone);
-		user.setEmailId(emailId);
-		user.setEmailVerified(false);
-		user.setCreatedOn(Timestamp.from(Instant.now()));
-		        
-		logger.debug("The createUser() method was invoked!, user={}", user.toString());
-		        
-		this.userService.createUser(user);
-		        
-		return "User Created Successfully";
-	}
+//	@GetMapping("/{first}/{last}/{username}/{password}/{phone}/{emailId}")
+//	public String createUser(@PathVariable String first, @PathVariable String last, @PathVariable String username, @PathVariable String password, @PathVariable String phone, @PathVariable String emailId) {	
+//		User user = new User();
+//        
+//		user.setFirstName(first);
+//		user.setLastName(last);
+//		user.setUsername(username);
+//		user.setPassword(password);
+//		user.setPhone(phone);
+//		user.setEmailId(emailId);
+//		user.setEmailVerified(false);
+//		user.setCreatedOn(Timestamp.from(Instant.now()));
+//		        
+//		logger.debug("The createUser() method was invoked!, user={}", user.toString());
+//		        
+//		this.userService.createUser(user);
+//		        
+//		return "User Created Successfully";
+//	}
 	
 	@PostMapping("/signup")
 	public User signup(@RequestBody User user) { 
