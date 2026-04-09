@@ -1,6 +1,8 @@
 package com.bptn.feedApp.security;
 
 import java.util.Collection;
+import java.util.Collections;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import com.bptn.feedApp.jpa.User;
@@ -19,8 +21,8 @@ public class CustomUserDetails implements UserDetails {
 
    @Override
    public Collection<? extends GrantedAuthority> getAuthorities() {
-      
-      return null;
+	// Returns an empty, unmodifiable list instead of null
+	    return Collections.emptyList();
    }
 
    @Override
