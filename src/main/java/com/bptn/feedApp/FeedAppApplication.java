@@ -21,4 +21,3 @@ public class FeedAppApplication {
 // Service - UserService (CRUD Operation), FeedService, DashboardService
 // Model - User (DAO)
 // Repository / Factory
-
